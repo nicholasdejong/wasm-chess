@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>hello-wasm example</title>
+  </head>
+  <body>
+    <script type="module">
+      import init, { best_move } from "./bitboard_generator.js";
+      init().then(() => {
+        best_move(prompt("fen"), parseInt(prompt("depth")));
+      });
+    </script>
+  </body>
+</html>
